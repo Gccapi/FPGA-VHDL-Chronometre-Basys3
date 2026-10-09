@@ -25,3 +25,29 @@ Le système gère l'affichage dynamique multiplexé sur 4 afficheurs 7 segments 
 ├── countled.vhd        # Code source VHDL principal (Architecture & Entité)
 ├── countled_hd.xdc     # Fichier de contraintes matérielles pour Basys 3
 └── README.md           # Documentation du projet
+
+## Utilisation & Synthèse sous Vivado
+
+1. **Création du projet :** Ouvrez Xilinx Vivado et créez un projet ciblant la carte **Digilent Basys 3** (`XC7A35T-1CPG236C`).
+2. **Ajout des sources :**
+   - Ajoutez `countled.vhd` dans les **Design Sources**.
+   - Ajoutez `countled_hd.xdc` dans les **Constraints**.
+3. **Flux de conception :**
+   - Lancez la **Synthesis**.
+   - Lancez l'**Implementation**.
+   - Générez le fichier **Bitstream** (`.bit`).
+4. **Programmation :** Connectez la carte en USB et téléversez le bitstream via le **Hardware Manager**.
+
+---
+
+## Matériel & Outils Utilisés
+
+- **Carte FPGA :** Digilent Basys 3 (Xilinx Artix-7)
+- **Environnement de développement :** AMD / Xilinx Vivado (VHDL-2002/2008)
+- **Langage :** VHDL
+
+---
+
+## Auteur
+
+- **Florian ALAUX** 
